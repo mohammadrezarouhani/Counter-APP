@@ -1,5 +1,5 @@
 
-<script setup>
+<!-- <script setup>
   import { ref } from 'vue';
   const count=ref(0);
 
@@ -11,6 +11,26 @@
     count.value--
   }
 
+</script> -->
+
+<script>
+export default (
+  {
+    data() {
+      return {
+        count: 0
+      }
+    },
+    methods: {
+      addToCount() {
+        this.count++
+      },
+      subFromCount() {
+        this.count--
+      }
+    },
+  }
+)
 </script>
 
 <template>
@@ -25,22 +45,22 @@
 </template>
 
 <style scope>
-  main {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  div {
-    text-align: center;
-  }
+div {
+  text-align: center;
+}
 
-  button {
-    width: 80px;
-    height: 50px;
-    margin: 10px;
-    border-radius: 10px;
-  }
+button {
+  width: 80px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+}
 </style>
